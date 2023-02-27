@@ -178,6 +178,64 @@
     grid-row-end:9;
 }
 
+@media screen and (max-width: 768px) {
+  .LowerBanner{
+    padding: 50px;
+    display:grid;
+   /* align-items: center; */
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 200px);
+    grid-gap: 2%;
+
+}
+.images{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+
+
+.Lowercard1{
+
+    grid-column-start:1;
+    grid-column-end:9;
+    grid-row-start:1;
+    grid-row-end:2;
+}
+.Lowercard2{
+    grid-column-start:1;
+    grid-column-end:9;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+.Lowercard3{
+    grid-column-start:1;
+    grid-column-end:9;
+    grid-row-start:3;
+    grid-row-end:4;
+}
+.Lowercard5{
+    grid-column-start:1;
+    grid-column-end:9;
+    grid-row-start:4;
+    grid-row-end:5;
+}
+.Lowercard4{
+    grid-column-start:1;
+    grid-column-end:9;
+    grid-row-start:5;
+    grid-row-end:6;
+}
+.Lowercard6{
+    grid-column-start:1;
+    grid-column-end:9;
+    grid-row-start:6;
+    grid-row-end:7;
+}
+  
+}
+
 
 
 /* READ MORE */
@@ -207,6 +265,8 @@
   #showMore:checked ~ .theButton:after,#showMore2:checked ~ .theButton:after,  #showMore3:checked ~ .theButton:after,#showMore4:checked ~ .theButton:after{
    content:"Read Less";
   }
+
+
 
 
 /* OVERLAYYYY EFFECT */
@@ -250,6 +310,10 @@
     transform: translate(-50%, -50%);
     text-align: center;
   }
+
+
+
+
 
 
 
