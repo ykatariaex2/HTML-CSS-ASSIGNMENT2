@@ -1,0 +1,255 @@
+#grad1 {
+    height: 100%;
+    background: linear-gradient( to left bottom, transparent 250px, #F6F6F8 0);
+  }
+  *{
+    margin-top: 0px;
+  }
+
+
+  /* UPPER CARDS */
+.UpperBanner{
+    margin-left: 9%; 
+    padding-top: 4%;
+    margin-bottom: 20%; 
+    display:grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(5, 5vw);
+
+    row-gap: 7%;
+    column-gap: 4%;
+    justify-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .UpperBanner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+  }
+  .card1,.card2,.card3,.card4 {
+    height: 300px;
+    width: 60%;
+  }
+  
+}
+.card1,.card2,.card3,.card4{
+    background-color: white;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     /* /* width:100%; */
+    height: 250px; 
+    margin: auto;
+    text-align:center;
+    font-family: serif;
+    border: 50px;
+}
+
+.card1{
+    padding: 5%;
+    grid-row-start:1;
+    grid-row-end:4;
+    grid-column-start:4;
+    grid-column-end:6;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(0.25turn, rgb(243, 81, 81), rgb(200, 189, 189));
+    border-image-slice: 1;
+  
+}
+
+
+.card2{
+    padding: 5%;
+    grid-row-start:2;
+    grid-row-end:5;
+
+    grid-column-start:2;
+    grid-column-end:4;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(0.25turn, rgb(94, 149, 231), rgb(204, 203, 233));
+    border-image-slice: 1;
+ 
+}
+
+.card3{
+    padding: 5%;
+    grid-row-start:2;
+    grid-row-end:5;
+    grid-column-start:6;
+    grid-column-end:8;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(0.25turn, rgb(1, 10, 11), rgb(199, 201, 202));
+    border-image-slice: 1;
+}
+.card4{
+   
+    padding: 5%;
+
+    grid-row-start:4;
+    grid-row-end:7;
+    grid-column-start:4;
+    grid-column-end:6;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(0.25turn, rgb(58, 196, 211), rgb(190, 224, 241));
+    border-image-slice: 1;
+}
+
+.icons{
+    
+    float: left;
+}
+
+.cardspace{
+     margin-top: 20%; 
+     font-size: 17px;
+     font-weight:bold;
+}
+
+.TextUpper{
+  
+    grid-row-start:1;
+    grid-column-start:2;
+    grid-column-end:4;
+
+}
+.services{
+    font-weight: bold;
+ 
+}
+
+
+
+/* LOWER CARDS */
+
+.LowerBanner{
+    padding: 50px;
+    display:grid;
+    
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 2%;
+
+}
+.images{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+
+
+.Lowercard1{
+
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-row-start:1;
+    grid-row-end:3;
+}
+.Lowercard2{
+    grid-column-start:3;
+    grid-column-end:5;
+    grid-row-start:1;
+    grid-row-end:3;
+}
+.Lowercard3{
+    grid-column-start:5;
+    grid-column-end:9;
+    grid-row-start:1;
+    grid-row-end:6;
+}
+.Lowercard5{
+    grid-column-start:1;
+    grid-column-end:5;
+    grid-row-start:3;
+    grid-row-end:6;
+}
+.Lowercard4{
+    grid-column-start:1;
+    grid-column-end:5;
+    grid-row-start:6;
+    grid-row-end:9;
+}
+.Lowercard6{
+    grid-column-start:5;
+    grid-column-end:9;
+    grid-row-start:6;
+    grid-row-end:9;
+}
+
+
+
+/* READ MORE */
+.someText{
+    height:10%;
+    overflow:hidden;
+    display:block;
+    padding:5%;
+    
+  }
+  
+  .theButton{
+  color:purple;
+   
+  }
+  
+  .theButton:after{
+   
+    content:"Read More..";
+  }
+  
+  #showMore:checked + .someText,#showMore2:checked + .someText,#showMore3:checked + .someText,#showMore4:checked + .someText{
+    height:40%;
+  }
+
+  
+  #showMore:checked ~ .theButton:after,#showMore2:checked ~ .theButton:after,  #showMore3:checked ~ .theButton:after,#showMore4:checked ~ .theButton:after{
+   content:"Read Less";
+  }
+
+
+/* OVERLAYYYY EFFECT */
+  .Lowercard1,.Lowercard2,.Lowercard3,.Lowercard4,.Lowercard5,.Lowercard6{
+    position: relative;
+   
+  }
+  
+  .images {
+    display: block;
+   
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #F6F6F8;
+  }
+  
+  .Lowercard1:hover .overlay, .Lowercard2:hover .overlay, .Lowercard3:hover .overlay, .Lowercard4:hover .overlay, .Lowercard5:hover .overlay, .Lowercard6:hover .overlay {
+    opacity: 1;
+  }
+
+  
+  
+  .text {
+    color: rgb(23, 21, 21);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+
