@@ -16,8 +16,8 @@
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(5, 5vw);
 
-    row-gap: 7%;
-    column-gap: 4%;
+    row-gap: 8%;
+    column-gap: 2%;
     justify-items: center;
 }
 
